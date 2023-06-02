@@ -15,4 +15,12 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'import/newline-after-import': ['error', { count: 1 }],
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+        extensions: ['.ts', '.tsx'],
+      },
+    },
+  },
 };
