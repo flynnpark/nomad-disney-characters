@@ -7,23 +7,28 @@ import Home from './pages/Home';
 import { loader as homeLoader } from './pages/Home/loader';
 import { queryClient } from './utils/queryClient';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        {
+          path: '',
+          element: <Home />,
+          loader: homeLoader(queryClient),
+        },
+        {
+          path: 'characters/:id',
+          element: <Character />,
+          loader: characterLoader(queryClient),
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '',
-        element: <Home />,
-        loader: homeLoader(queryClient),
-      },
-      {
-        path: 'characters/:id',
-        element: <Character />,
-        loader: characterLoader(queryClient),
-      },
-    ],
-  },
-]);
+    basename: '/nomad-disney-characters',
+  }
+);
 
 export default router;
