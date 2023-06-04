@@ -113,7 +113,7 @@ Error generating stack: `+o.message+`
 `;function rS(){return J.jsx(Zw,{children:J.jsxs(eS,{children:[J.jsx(tS,{children:J.jsx(Rm,{to:"/",children:"Disney Characters"})}),J.jsx(nS,{children:J.jsx("a",{href:"https://github.com/flynnpark/nomad-disney-characters",target:"_blank",children:J.jsx(Jw,{size:32})})})]})})}const iS=Ye.div`
   max-width: ${Vm}px;
   margin: auto;
-`;function oS(){return J.jsxs(J.Fragment,{children:[J.jsx(rS,{}),J.jsx(iS,{children:J.jsx($1,{})})]})}const qm="/assets/not_found-f7cf73ae.png",Km=Ye.img`
+`;function oS(){return J.jsxs(J.Fragment,{children:[J.jsx(rS,{}),J.jsx(iS,{children:J.jsx($1,{})})]})}const qm="/nomad-disney-characters/assets/not_found-f7cf73ae.png",Km=Ye.img`
   vertical-align: middle;
   object-fit: cover;
   width: ${e=>e.size}px;
