@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import notFoundImage from '../assets/not_found.png';
+import { Avatar } from './commons';
 
 const Container = styled.div`
   display: flex;
@@ -9,14 +10,6 @@ const Container = styled.div`
   text-align: center;
   justify-content: center;
   margin: 24px 0;
-`;
-
-const Avatar = styled.img`
-  vertical-align: middle;
-  object-fit: cover;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 `;
 
 const CharacterName = styled.p`
@@ -33,7 +26,7 @@ function CharacterIcon({ character }: CharacterIconProps) {
   return (
     <Container>
       <Link to={`characters/${character.id}`}>
-        <Avatar src={imageUrl ?? notFoundImage} alt={name} />
+        <Avatar size={100} src={imageUrl ?? notFoundImage} alt={name} />
         <CharacterName>{name}</CharacterName>
       </Link>
     </Container>
